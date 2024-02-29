@@ -9,8 +9,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <title>Convert Money</title>
 </head>
 
@@ -20,18 +20,23 @@
     <main>
         <label>
             Converter <b>de:</b>
-            <select>
-                <option>R$ Real Brasileiro</option>
+            <select class="currency-select-convert">
+                <option value="real-select">R$ Real Brasileiro</option>
+                <option value="dolar-select">US$ Dolar Americano</option>
+                <option value="euro-select">€$ Euro</option>
+                <option value="libra-select">£ Libra Esterlina</option>
+                <option value="peso-select">$ Peso Argentino</option>
             </select>
         </label>
 
         <label>
             Converter <b>para:</b>
-            <select class="currency-select">
-                <option value="dolar">US$ Dolar Americano</option>
-                <option value="euro">€$ Euro</option>
-                <option value="libra">£ Libra Esterlina</option>
-                <option value="peso">$ Peso Argentino</option>
+            <select class="currency-select-converted">
+                <option value="dolar-converted">US$ Dolar Americano</option>
+                <option value="euro-converted">€$ Euro</option>
+                <option value="libra-converted">£ Libra Esterlina</option>
+                <option value="peso-converted">$ Peso Argentino</option>
+                <option value="real-converted">R$ Real Brasileiro</option>
             </select>
         </label>
 
@@ -44,7 +49,7 @@
 
         <section>
             <div class="currency-box">
-                <img src="./assets/brasil.png" alt="moeda-converter">
+                <img class="currency-img-convert" src="./assets/brasil.png" alt="moeda-converter" width="50px">
                 <p class="currency-convert">Real</p>
                 <p class="currency-value-convert">R$ 0,00</p>
             </div>
@@ -52,7 +57,7 @@
             <img class="arrow" src="./assets/seta-conversao.png" alt="seta" width="30px">
 
             <div class="currency-box">
-                <img class="currency-img" src="./assets/dolar.png" alt="moeda-convertida" width="50px">
+                <img class="currency-img-converted" src="./assets/dolar.png" alt="moeda-convertida" width="50px">
                 <p class="currency-converted">Dolar</p>
                 <p class="currency-value-converted">US$ 0,00</p>
             </div>
@@ -61,4 +66,5 @@
     </main>
 </body>
 <script src="./scripts.js"></script>
+
 </html>
