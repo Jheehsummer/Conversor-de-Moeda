@@ -14,6 +14,12 @@ function convertValues() {
     const libraToday = 6.5
     const pesoToday = 0.0060
     const realToday = 1.0
+    const ieneToday = 0.033
+    const dolarAustralianoToday = 3.24
+    const francoToday = 5.67
+    const dolarCanadenseToday = 3.67
+    const liraToday = 0.16
+
 
     if (currencySelectConvert.value == "real-select") {
         currencyValueConvert.innerHTML = new Intl.NumberFormat("pt-BR", {
@@ -56,6 +62,46 @@ function convertValues() {
         total = inputCurrencyValue*pesoToday
     }
 
+    if (currencySelectConvert.value == "iene-select") {
+        currencyValueConvert.innerHTML = new Intl.NumberFormat("ja-JP", {
+            style: "currency",
+            currency: "JPI"
+        }).format(inputCurrencyValue)
+        total = inputCurrencyValue*ieneToday
+    }
+
+    if (currencySelectConvert.value == "dolar-australiano-select") {
+        currencyValueConvert.innerHTML = new Intl.NumberFormat("en-AU", {
+            style: "currency",
+            currency: "AUD"
+        }).format(inputCurrencyValue)
+        total = inputCurrencyValue*dolarAustralianoToday
+    }
+
+    if (currencySelectConvert.value == "franco-select") {
+        currencyValueConvert.innerHTML = new Intl.NumberFormat("de-CH", {
+            style: "currency",
+            currency: "CHF"
+        }).format(inputCurrencyValue)
+        total = inputCurrencyValue*francoToday
+    }
+
+    if (currencySelectConvert.value == "dolar-canadense-select") {
+        currencyValueConvert.innerHTML = new Intl.NumberFormat("en-CA", {
+            style: "currency",
+            currency: "CAD"
+        }).format(inputCurrencyValue)
+        total = inputCurrencyValue*dolarCanadenseToday
+    }
+
+    if (currencySelectConvert.value == "lira-select") {
+        currencyValueConvert.innerHTML = new Intl.NumberFormat("tr-TR", {
+            style: "currency",
+            currency: "TRY"
+        }).format(inputCurrencyValue)
+        total = inputCurrencyValue*pesoToday
+    }
+
 
 if (currencySelectConverted.value == "dolar-converted") {
     currencyValueConverted.innerHTML = new Intl.NumberFormat("en-US", {
@@ -90,6 +136,40 @@ if (currencySelectConverted.value == "real-converted") {
     }).format(total / realToday)
 }
 
+if (currencySelectConverted.value == "iene-converted") {
+    currencyValueConverted.innerHTML = new Intl.NumberFormat("ja-JP", {
+        style: "currency",
+        currency: "JPY"
+    }).format(total / ieneToday)
+}
+
+if (currencySelectConverted.value == "dolar-australiano-converted") {
+    currencyValueConverted.innerHTML = new Intl.NumberFormat("en-AU", {
+        style: "currency",
+        currency: "AUD"
+    }).format(total / dolarAustralianoToday)
+}
+
+if (currencySelectConverted.value == "franco-converted") {
+    currencyValueConverted.innerHTML = new Intl.NumberFormat("de-CH", {
+        style: "currency",
+        currency: "CHF"
+    }).format(total / francoToday)
+}
+
+if (currencySelectConverted.value == "dolar-canadense-converted") {
+    currencyValueConverted.innerHTML = new Intl.NumberFormat("en-CA", {
+        style: "currency",
+        currency: "CAD"
+    }).format(total / dolarCanadenseToday )
+}
+
+if (currencySelectConverted.value == "lira-converted") {
+    currencyValueConverted.innerHTML = new Intl.NumberFormat("tr-TR", {
+        style: "currency",
+        currency: "TRY"
+    }).format(total / liraToday)
+}
 
 }
 
@@ -122,6 +202,31 @@ function changeCurrencyConverted() {
         CurrencyImageConverted.src = "./assets/brasil.png"
     }
 
+    if (currencySelectConverted.value == "iene-converted") {
+        currencyConverted.innerHTML = "Iene"
+        CurrencyImageConverted.src = "./assets/japao.png"
+    }
+
+    if (currencySelectConverted.value == "dolar-australiano-converted") {
+        currencyConverted.innerHTML = "Dolar Australiano"
+        CurrencyImageConverted.src = "./assets/australia.png"
+    }
+
+    if (currencySelectConverted.value == "franco-converted") {
+        currencyConverted.innerHTML = "Franco Suiço"
+        CurrencyImageConverted.src = "./assets/suica.png"
+    }
+
+    if (currencySelectConverted.value == "dolar-canadense-converted") {
+        currencyConverted.innerHTML = "Dolar Canadense"
+        CurrencyImageConverted.src = "./assets/canada.png"
+    }
+
+    if (currencySelectConverted.value == "lira-converted") {
+        currencyConverted.innerHTML = "Lira Turca"
+        CurrencyImageConverted.src = "./assets/turquia.png"
+    }
+
 }
 
 
@@ -152,6 +257,31 @@ function changeCurrencyConvert() {
     if (currencySelectConvert.value == "real-select") {
         currencyConvert.innerHTML = "Real"
         CurrencyImageConvert.src = "./assets/brasil.png"
+    }
+
+    if (currencySelectConvert.value == "iene-select") {
+        currencyConvert.innerHTML = "Iene"
+        CurrencyImageConvert.src = "./assets/japao.png"
+    }
+
+    if (currencySelectConvert.value == "dolar-australiano-select") {
+        currencyConvert.innerHTML = "Dolar Australiano"
+        CurrencyImageConvert.src = "./assets/australia.png"
+    }
+
+    if (currencySelectConvert.value == "franco-select") {
+        currencyConvert.innerHTML = "Franco Suiço"
+        CurrencyImageConvert.src = "./assets/suica.png"
+    }
+
+    if (currencySelectConvert.value == "dolar-canadense-select") {
+        currencyConvert.innerHTML = "Dolar Canadense"
+        CurrencyImageConvert.src = "./assets/canada.png"
+    }
+
+    if (currencySelectConvert.value == "lira-select") {
+        currencyConvert.innerHTML = "Lira Turca"
+        CurrencyImageConvert.src = "./assets/turquia.png"
     }
 }
 

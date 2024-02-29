@@ -17,12 +17,20 @@ body {
     display: block;
     margin: 15px auto;
 }
+.img-fundo {
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    width: 100vw;
+    height: 1000px;
+   
+}
 
 main {
     width: 375px;
-    background-color: #d4d8d4;
+    background-color: #e0e6f3;
     border-radius: 20px;
-    margin: 0 auto;
+    margin: 40px auto;
     padding: 44px 24px 23px;
     margin-bottom: 40px;
 }
@@ -48,11 +56,11 @@ input {
 }
 
 button {
-    border: 2px solid #494848;
+    border: 2px solid #171866;
     border-radius: 30px;
-    height: 40px;
+    height: 50px;
     width: 100%;
-    background-color: #7ba56a;
+    background-color: #4569b88e;
     color: #000000;
     font-weight: 700;
     font-size: 17px;
@@ -72,7 +80,7 @@ button:active {
 }
 
 section {
-    border: 2px solid #494848;
+    border: 2px solid #171866;
     border-radius: 30px;
     padding: 15px;
     display: flex;
