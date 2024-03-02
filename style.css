@@ -30,10 +30,13 @@ main {
     margin: 40px auto;
     padding: 44px 24px 23px;
     margin-bottom: 40px;
+    border: 6px solid #171866;
 }
 
 label {
-    color: #525050
+    color: #525050;
+    font-size: 20px;
+    
 }
 
 select,
@@ -46,21 +49,21 @@ input {
     margin-bottom: 24px;
     padding: 10px;
     font-weight: 700;
-    font-size: 14px;
+    font-size: 16px;
     color: #525050;
     appearance: none;
     cursor: pointer;
 }
 
 button {
-    border: 2px solid #171866;
+    border: 3px solid #171866;
     border-radius: 30px;
     height: 50px;
     width: 100%;
     background-color: #4569b88e;
-    color: #000000;
+    color: #171866;
     font-weight: 700;
-    font-size: 17px;
+    font-size: 23px;
     margin-bottom: 20px;
     display: block;
     margin-left: auto;
@@ -83,6 +86,7 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
+    border: 3px solid #171866;
 }
     
 .arrow {
