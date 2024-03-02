@@ -4,7 +4,8 @@ const currencySelectConvert = document.querySelector(".currency-select-convert")
 const currencySelectConverted = document.querySelector(".currency-select-converted")
 
 function convertValues() {
-    const inputCurrencyValue = document.querySelector(".input-currency").value
+    const inputCurrencyValue2 = document.querySelector(".input-currency").value
+    const inputCurrencyValue = (inputCurrencyValue2.replace(',' , '.'))
     const currencyValueConvert = document.querySelector(".currency-value-convert")
     const currencyValueConverted = document.querySelector(".currency-value-converted")
 
