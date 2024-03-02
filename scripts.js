@@ -1,24 +1,30 @@
 
+
 const convertButton = document.querySelector(".convert-button")
 const currencySelectConvert = document.querySelector(".currency-select-convert")
 const currencySelectConverted = document.querySelector(".currency-select-converted")
 
-function convertValues() {
-    const inputCurrencyValue = document.querySelector(".input-currency").value
+async function convertValues() {
+    const inputCurrencyValue2 = document.querySelector(".input-currency").value
+    const inputCurrencyValue = (inputCurrencyValue2.replace("," , "."))
     const currencyValueConvert = document.querySelector(".currency-value-convert")
     const currencyValueConverted = document.querySelector(".currency-value-converted")
 
+    const moedas = "USD-BRL,EUR-BRL,GBP-BRL,ARS-BRL,JPY-BRL,AUD-BRL,CHF-BRL,CAD-BRL,TRY-BRL"
+    const url = `https://economia.awesomeapi.com.br/last/${moedas}`
+    const data = await fetch(url).then(response => response.json())
+
     let total = 1
-    const dolarToday = 4.96
-    const euroToday = 5.37
-    const libraToday = 6.5
-    const pesoToday = 0.0060
-    const realToday = 1.0
-    const ieneToday = 0.033
-    const dolarAustralianoToday = 3.24
-    const francoToday = 5.67
-    const dolarCanadenseToday = 3.67
-    const liraToday = 0.16
+    const dolarToday = data.USDBRL["bid"]
+    const euroToday = data.EURBRL["bid"]
+    const libraToday = data.GBPBRL["bid"]
+    const pesoToday = data.ARSBRL["bid"]
+    const realToday = 1
+    const ieneToday = data.JPYBRL["bid"]
+    const dolarAustralianoToday = data.AUDBRL["bid"]
+    const francoToday = data.CHFBRL["bid"]
+    const dolarCanadenseToday = data.CADBRL["bid"]
+    const liraToday = data.TRYBRL["bid"]
 
 
     if (currencySelectConvert.value == "real-select") {
@@ -289,4 +295,3 @@ function changeCurrencyConvert() {
 currencySelectConvert.addEventListener("change", changeCurrencyConvert)
 currencySelectConverted.addEventListener("change", changeCurrencyConverted)
 convertButton.addEventListener("click", convertValues)
-
