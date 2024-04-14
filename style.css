@@ -24,7 +24,8 @@
 }
 
 main {
-    width: 375px;
+    width: 95%;
+    max-width: 450px;
     background-color: #e0e6f3;
     border-radius: 20px;
     margin: 40px auto;
@@ -118,15 +119,7 @@ section {
 
 }
 
-@media (max-width: 600px){
 
-    main {
-        width: 200px;
-        height: auto;
-        margin: 30 auto;
-        
-    }
-}
 
 
 
